@@ -6,14 +6,16 @@ import img2 from '../public/imgs/2.png'
 import img3 from '../public/imgs/3.png'
 import img4 from '../public/imgs/4.png'
 import Nav from './components/Nav'
-
+import DownloadButton from './components/DownloadButton'
+import AppstoreBtn from './components/AppstoreBtn'
+import PlayStoreBtn from './components/PlayStoreBtn'
 export default function Home() {
   return (
     <div>
       <header>
         <div className='hederContainer'>
           <h4>다핏</h4>
-          <button>앱 다운로드</button>
+          <DownloadButton/>
         </div>
       </header>
       <section className='heroSection'>
@@ -22,14 +24,8 @@ export default function Home() {
           <h2>24시간 온라인 PT 서비스</h2>
           <h1>다핏</h1>
           <div className='buttons'>
-            <button className='brandButton'>
-              <Image src={playstore} alt='Playstore logo'/>
-              Google Play
-            </button>
-            <button className='brandButton'>
-              <Image src={appstoreWhite} alt='Appstore logo'/>
-              App Store
-            </button>
+            <PlayStoreBtn/>
+            <AppstoreBtn/>
           </div>
         </div>
       </section>

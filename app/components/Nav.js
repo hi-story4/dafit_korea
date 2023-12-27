@@ -1,6 +1,7 @@
 
 'use client'
 import React, {useState, useEffect, useRef} from 'react'
+import DownloadButton from './DownloadButton'
 export default function Nav() {
     const navRef = useRef(null);
     const [section, setsection] = useState(0);
@@ -132,7 +133,7 @@ export default function Nav() {
                     setsection(5);
                 }} className={section === 5 ? 'currentSection' : 'notCurrentSection'}>Fourth</li>
             </ul>
-            <button>앱 다운로드</button>
+            <DownloadButton/>
             </div>
         </nav>
     )
