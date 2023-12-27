@@ -4,20 +4,58 @@ import React, {useState, useEffect, useRef} from 'react'
 export default function Nav() {
     const navRef = useRef(null);
     const [section, setsection] = useState(0);
+    const [phone, setPhone] = useState(false);
+
     useEffect(() => {
-      window.addEventListener('scroll', scrollEvent);
-        return () => window.removeEventListener('scroll', scrollEvent);
+        window.addEventListener('resize', resizeEvent);
+            return () => window.removeEventListener('resize', resizeEvent);
     }, []);
+    let timer = null;
+    const resizeEvent = (e) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            if (window.innerWidth <= 767) {
+                setPhone(true);
+            } else {
+                setPhone(false);
+            }
+        }, 1000);
+    }
+
+    useEffect(() => {
+        console.log('phone!')
+        window.addEventListener('scroll', scrollEvent);
+            return () => window.removeEventListener('scroll', scrollEvent);
+    }, [phone]);
     let target = null;
     const scrollEvent = () => {
-        clearTimeout(target);
+        const sections = navRef.current.parentNode
+        const sectionNode = sections.childNodes
+        const first = sectionNode[1].getBoundingClientRect();
+        const second = sectionNode[2].getBoundingClientRect();
+        const third = sectionNode[3].getBoundingClientRect();
+        const fourth = sectionNode[4].getBoundingClientRect();
+        if(phone !== true) {
+            clearTimeout(target);
+        } else {
+            console.log('ssss')
+            if(fourth.y < 0) {
+                setsection(5);
+            } else if(third.y < 0) {
+                setsection(4);
+            } else if(second.y < 0) {
+                setsection(3);
+            } else if(first.y < 0) {
+                setsection(2);
+            } else if(sections.getBoundingClientRect().y < 0) {
+                setsection(1);
+            }
+            else {
+                setsection(0);
+            }
+            return;  // 폰 모드에서는 스크롤 이벤트 발생 시 작동하지 않�
+        }
         target = setTimeout(() => {
-            const sections = navRef.current.parentNode
-            const sectionNode = sections.childNodes
-            const first = sectionNode[1].getBoundingClientRect();
-            const second = sectionNode[2].getBoundingClientRect();
-            const third = sectionNode[3].getBoundingClientRect();
-            const fourth = sectionNode[4].getBoundingClientRect();
             if(fourth.y < 0) {
                 setsection(5);
             } else if(third.y < 0) {
@@ -36,13 +74,8 @@ export default function Nav() {
     }
     useEffect (()=>{
         if(!navRef.current) return;
-        console.log(section)
         const sections = navRef.current.parentNode
         const sectionNode = sections.childNodes
-        console.log(sectionNode[1].childNodes[0].childNodes[1].childNodes[0].childNodes[2].lastChild)
-        console.log(sectionNode[2].childNodes[0].childNodes[0].childNodes[0].childNodes[3].lastChild)
-        console.log(sectionNode[3].childNodes[0].childNodes[1].childNodes[0].childNodes[0].lastChild)
-        console.log(sectionNode[4].childNodes[0].childNodes[0].childNodes[0].childNodes[0].lastChild)
         sectionNode[1].childNodes[0].childNodes[0].classList.toggle('currentImg', section === 2);
         sectionNode[2].childNodes[0].childNodes[1].classList.toggle('currentImg', section === 3);
         sectionNode[3].childNodes[0].childNodes[0].classList.toggle('currentImg', section === 4);
