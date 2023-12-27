@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
+    "react-dom": "^18"
   }
 }
