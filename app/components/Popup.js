@@ -10,13 +10,18 @@ export function Popup({children}) {
         popup,
         setPopup,
     };
-    useEffect(()=>{
-        if(popup){
-            setTimeout(() => {
-                setPopup(false);
-            }, 4000);
+    useEffect(() => {
+        let closeTimeout;
+        if (popup) {
+            clearTimeout(closeTimeout);
+            closeTimeout = setTimeout(() => {
+            setPopup(false);
+        }, 4000);
         }
-    },[popup])
+        return () => {
+          clearTimeout(closeTimeout); // 컴포넌트가 언마운트될 때 clearTimeout을 호출하여 메모리 누수 방지
+        };
+    }, [popup]);
     return (
         <>
             <div className={popup ?'popupOn' : 'popupOff'}>
