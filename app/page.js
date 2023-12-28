@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import appstoreWhite from '../public/imgs/appstoreWhite.svg'
-import playstore from '../public/imgs/playstore.svg'
 import img1 from '../public/imgs/1.png'
 import img2 from '../public/imgs/2.png'
 import img3 from '../public/imgs/3.png'
@@ -9,6 +7,7 @@ import Nav from './components/Nav'
 import DownloadButton from './components/DownloadButton'
 import AppstoreBtn from './components/AppstoreBtn'
 import PlayStoreBtn from './components/PlayStoreBtn'
+
 export default function Home() {
   return (
     <div>
@@ -56,7 +55,6 @@ export default function Home() {
               <br/>원할 때면 언제든 변경</strong>할 수 있어요.
               </p>
             </div>
-
             <div className='imgBox notCurrentImg'>
               <Image src={img2} alt='핸드폰과 동전을 받는 손 이미지'  />
             </div>
@@ -101,10 +99,9 @@ export default function Home() {
         <div className='footerWrap'>
           <div className='footerContents'>
             <h3>다핏</h3>
-            <div className='info'>
-              
+            <div className='info'> 
               <div className='infoTitle'>
-                <p><strong><span>구</span><span>원</span><span>성</span></strong></p>
+                <p><strong><span>구</span><span>성</span><span>원</span></strong></p>
                 <p><strong><span>전</span><span>화</span></strong></p>
                 <p><strong><span>주</span><span>소</span></strong></p>
                 <p><strong><span>고</span><span>객</span><span>문</span><span>의</span></strong></p>  

@@ -1,19 +1,19 @@
 'use client'
-import React, {useState} from 'react'
-import Image from 'next/image'
-import playstore from '../../public/imgs/playstore.svg'
-export default function PlayStoreBtn() {
+import React, { useEffect, useState} from 'react'
+export default function popup({children}) {
     const [popup, setPopup] =  useState(false);
-    
+    useEffect(()=>{
+        if(popup){
+            setTimeout(() => {
+                setPopup(false);
+            }, 3000);
+        }
+    },[popup])
     return (
-        <>
-            <button className='brandButton'  onClick={()=>{setPopup(true)}}>
-                <Image src={playstore} alt='Playstore logo'/>
-                Google Play
-            </button>
+        < >
             {
                 popup
-                ? 
+                ?
                 <div className='popup'>
                     현재는 앱이 출시되지 않았습니다. 앱 출시 후 많은 관심 부탁드립니다.
                     <span className='closeBtn' onClick={()=>{setPopup(false)}}>
@@ -24,6 +24,7 @@ export default function PlayStoreBtn() {
                 </div>
                 : null
             }
+            {children}
         </>
         
     )

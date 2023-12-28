@@ -5,30 +5,10 @@ import DownloadButton from './DownloadButton'
 export default function Nav() {
     const navRef = useRef(null);
     const [section, setsection] = useState(0);
-    const [phone, setPhone] = useState(false);
-
     useEffect(() => {
-        window.addEventListener('resize', resizeEvent);
-            return () => window.removeEventListener('resize', resizeEvent);
-    }, []);
-    let timer = null;
-    const resizeEvent = (e) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            if (window.innerWidth <= 767) {
-                setPhone(true);
-            } else {
-                setPhone(false);
-            }
-        }, 1000);
-    }
-
-    useEffect(() => {
-        console.log('phone!')
         window.addEventListener('scroll', scrollEvent);
             return () => window.removeEventListener('scroll', scrollEvent);
-    }, [phone]);
-    let target = null;
+    }, []);
     const scrollEvent = () => {
         const sections = navRef.current.parentNode
         const sectionNode = sections.childNodes
@@ -36,42 +16,21 @@ export default function Nav() {
         const second = sectionNode[2].getBoundingClientRect();
         const third = sectionNode[3].getBoundingClientRect();
         const fourth = sectionNode[4].getBoundingClientRect();
-        if(phone !== true) {
-            clearTimeout(target);
-        } else {
-            console.log('ssss')
-            if(fourth.y < 0) {
-                setsection(5);
-            } else if(third.y < 0) {
-                setsection(4);
-            } else if(second.y < 0) {
-                setsection(3);
-            } else if(first.y < 0) {
-                setsection(2);
-            } else if(sections.getBoundingClientRect().y < 0) {
-                setsection(1);
-            }
-            else {
-                setsection(0);
-            }
-            return;  // 폰 모드에서는 스크롤 이벤트 발생 시 작동하지 않�
+        console.log('ssss')
+        if(fourth.y < 0) {
+            setsection(5);
+        } else if(third.y < 0) {
+            setsection(4);
+        } else if(second.y < 0) {
+            setsection(3);
+        } else if(first.y < 0) {
+            setsection(2);
+        } else if(sections.getBoundingClientRect().y < 0) {
+            setsection(1);
         }
-        target = setTimeout(() => {
-            if(fourth.y < 0) {
-                setsection(5);
-            } else if(third.y < 0) {
-                setsection(4);
-            } else if(second.y < 0) {
-                setsection(3);
-            } else if(first.y < 0) {
-                setsection(2);
-            } else if(sections.getBoundingClientRect().y < 0) {
-                setsection(1);
-            }
-            else {
-                setsection(0);
-            }
-        }, 100);
+        else {
+            setsection(0);
+        }
     }
     useEffect (()=>{
         if(!navRef.current) return;
@@ -90,7 +49,11 @@ export default function Nav() {
     return (
         <nav ref={navRef} className={section < 1 ? 'disable' : 'active'}>
             <div className='navWrap'>
-            <h4>다핏</h4>
+            <h4 style={{cursor:'pointer'}} onClick={()=>{
+                window.scrollTo({
+                    top: 0,
+                })
+            }}>다핏</h4>
             <ul>
                 <li onClick={()=>{
                     const sections = navRef.current.parentNode

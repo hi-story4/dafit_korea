@@ -271,7 +271,7 @@ li {
   margin-bottom: 15px;
 }
 .heroSection {
-  height: calc(100vh - 63px);
+  height: calc(100vh - 60.5px);
   padding-bottom: 32px;
   background-color: var(--primary-color);
 }
