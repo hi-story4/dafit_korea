@@ -229,15 +229,13 @@ export default function Home() {
               <h2>
                 {" "}
                 운동 자세 피드백 및 수행여부 확인 <br />
-                (선택사항){" "}
               </h2>
 
               <p>
                 {" "}
                 운동하는 영상을 보내주시면 <br />
                 트레이너님 <strong> 맞춤형 피드백을 제공합니다. </strong> <br />
-                <br />
-                운동 수행 여부 확인{" "}
+                또한 운동 수행 여부도 확인합니다.
               </p>
             </div>
             <div className="kakaoImgBox ">
@@ -283,7 +281,6 @@ export default function Home() {
                 {" "}
                 나와 맞는 <br />
                 <strong> 식단 플랜을 세워드립니다. </strong> <br />
-                <br />
                 맞춤형 식단 플랜이 부담스럽다면 <br />
                 제공되지 않습니다.{" "}
               </p>

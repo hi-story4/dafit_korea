@@ -32,7 +32,7 @@ export default function Pricebox(props) {
       </div>
 
       <div className="surveyButton">
-        <Link href="https://tally.so/r/3lreG6">
+        <Link href={props.link}>
           <button>신청하기</button>
         </Link>
       </div>
