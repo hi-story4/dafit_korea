@@ -1,0 +1,77 @@
+.priceBoxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px;
+  column-gap: 2rem;
+}
+.priceBox {
+  background-color: white;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0.5rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #d1d5db;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.boxPriceTitle {
+  padding: 5px 20px;
+}
+.boxPriceTitle > p {
+  padding-top: 10px;
+  font-size: large;
+}
+
+.boxTextList {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.surveyButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.surveyButton > button {
+  padding: 10px 80px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1080px) {
+  .priceBoxContainer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  .priceBox {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .serviceSection > .heroSection {
+    height: 100%;
+  }
+  .priceBoxContainer {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .priceBox {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
