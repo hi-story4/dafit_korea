@@ -48,21 +48,21 @@ export default function register() {
             <Pricebox
               title="운동 플랜"
               subTitle="개인 맞춤 운동 관리"
-              price="99,000₩"
+              price="₩119,900"
               link="https://tally.so/r/mOGgG7"
               textList={textList1}
             />
             <Pricebox
               title="식단 플랜"
               subTitle="개인 맞춤 식단 관리"
-              price="99,000₩"
+              price="₩119,000"
               link="https://tally.so/r/nGlglp"
               textList={textList2}
             />
             <Pricebox
               title="종합 플랜"
               subTitle="개인 맞춤 운동 및 식단 관리"
-              price="179,000₩"
+              price="₩199,000₩"
               link="https://tally.so/r/3lreG6"
               textList={textList3}
             />

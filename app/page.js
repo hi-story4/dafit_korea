@@ -204,8 +204,8 @@ export default function Home() {
           <div className="fifthSectionWrap">
             <div className="kakaoImgBox ">
               <Image
-                src={kakao5}
-                alt="kakao5"
+                src={kakao1}
+                alt="kakao1"
                 height={800}
                 layout="responsive"
               />
@@ -240,8 +240,8 @@ export default function Home() {
             </div>
             <div className="kakaoImgBox ">
               <Image
-                src={kakao5}
-                alt="kakao5"
+                src={kakao2}
+                alt="kakao2"
                 height={800}
                 layout="responsive"
               />
@@ -253,8 +253,8 @@ export default function Home() {
           <div className="fifthSectionWrap">
             <div className="kakaoImgBox ">
               <Image
-                src={kakao5}
-                alt="kakao5"
+                src={kakao3}
+                alt="kakao3"
                 height={800}
                 layout="responsive"
               />
@@ -287,8 +287,8 @@ export default function Home() {
             </div>
             <div className="kakaoImgBox ">
               <Image
-                src={kakao5}
-                alt="kakao5"
+                src={kakao4}
+                alt="kakao4"
                 height={800}
                 layout="responsive"
               />
