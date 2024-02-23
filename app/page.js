@@ -286,12 +286,7 @@ export default function Home() {
               </p>
             </div>
             <div className="kakaoImgBox ">
-              <Image
-                src={kakao4}
-                alt="kakao4"
-                height={800}
-                layout="responsive"
-              />
+              <Image src={kakao4} alt="kakao4" layout="responsive" />
             </div>
           </div>
         </section>
@@ -299,12 +294,7 @@ export default function Home() {
         <section className="fifthSection">
           <div className="fifthSectionWrap">
             <div className="kakaoImgBox ">
-              <Image
-                src={kakao5}
-                alt="kakao5"
-                height={800}
-                layout="responsive"
-              />
+              <Image src={kakao5} alt="kakao5" layout="responsive" />
             </div>
             <div className="sectionText">
               <h2> 소비자 식단 피드백 </h2>
