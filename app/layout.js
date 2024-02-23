@@ -7,7 +7,7 @@ export const metadata = {
   description: "Landing page for the Fitness applications '다핏'",
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <html lang="ko">
       <body>
