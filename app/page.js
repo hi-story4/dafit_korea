@@ -1,5 +1,7 @@
 import Image from "next/image";
 //svg는 import 하려고 하면 next_config
+//@svgr/webpack -> 모든 svg import시 컴포넌트화하여 import 해서 일반 check svg를 kakaoFeead 처럼 import하면 오류 발생.
+//kakao feed는 컴포넌트처럼 쓰고 있지만 다른 애니메이션이 없는 svg는 Image 태그의 src로 사용하고 있기 때문
 import KakaoFeed from "../public/imgs/kakao-feed.svg";
 import img1 from "../public/imgs/1.png";
 import img2 from "../public/imgs/2.png";
