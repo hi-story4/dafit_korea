@@ -1,4 +1,6 @@
 import Image from "next/image";
+//svg는 import 하려고 하면 next_config
+import KakaoFeed from "../public/imgs/kakao-feed.svg";
 import img1 from "../public/imgs/1.png";
 import img2 from "../public/imgs/2.png";
 import img3 from "../public/imgs/3.png";
@@ -21,7 +23,7 @@ export default function Home() {
         <div className="hederContainer">
           <div className="logoContainer">
             <Image
-              src="/imgs/로고 블랙 배경제거-cropped.svg"
+              src="/imgs/logo-black.svg"
               alt="로고 블랙 배경제거 2:1"
               width={120} // 기본 크기
               height={50}
@@ -39,7 +41,7 @@ export default function Home() {
           <h2>24시간 온라인 PT 서비스</h2>
           <div className="bigLogoContainer">
             <Image
-              src="/imgs/로고 블랙 흑백 배경제거.svg"
+              src="/imgs/logo-black-big.svg"
               alt="로고 블랙 흑백 배경제거"
               width={300}
               height={300}
@@ -72,13 +74,14 @@ export default function Home() {
         >
           {/* Next.js의 Image 컴포넌트 사용 예시 */}
           <div style={{ width: "100%", height: "auto", position: "relative" }}>
-            <Image
-              src="/imgs/kakao-feed.png"
+            {/* <Image
+              src="/imgs/kakao-feed.svg"
               layout="responsive"
               width={700} // 원본 이미지의 너비
               height={700} // 원본 이미지의 높이
               alt="kakao-feed"
-            />
+            /> */}
+            <KakaoFeed style={{ width: "100%" }} />
           </div>
         </div>
 
@@ -134,7 +137,7 @@ export default function Home() {
                 <br />
                 오프라인 PT보다 무려
                 <br />
-                <strong>평균 40% 이상 저렴해요!</strong>
+                <strong>평균 90% 이상 저렴해요!</strong>
               </p>
             </div>
           </div>
@@ -158,7 +161,7 @@ export default function Home() {
                 다핏은 헬스장뿐만 아니라
                 <br />
                 <strong>
-                  어디서나
+                  언제 어디서나
                   <br />
                   온라인 코칭
                 </strong>
@@ -265,7 +268,7 @@ export default function Home() {
             <div className="sectionText">
               <h2>
                 {" "}
-                운동 자세 피드백 및 수행여부 확인 <br />
+                운동 자세 피드백 <br />
               </h2>
 
               <p>
@@ -338,9 +341,13 @@ export default function Home() {
 
               <p>
                 {" "}
-                전문가에게 내 식단을 <br />
+                어쩔 수 없는 회식, 약속 등으로 <br />
+                식단을 못지켜도 괜찮아요!
+                <br />
+                전문가가 균형있는 식단으로 피드백 해드립니다.
+                {/* 전문가에게 내 식단을 <br />
                 <strong> 피드백 받고 </strong> <br />
-                의지를 다 잡을 수 있습니다.{" "}
+                의지를 다 잡을 수 있습니다.{" "} */}
               </p>
             </div>
           </div>

@@ -310,7 +310,7 @@ li {
   justify-content: center;
 }
 .kakaoImgBox {
-  max-width: 350px;
+  max-width: 330px;
   display: flex;
   justify-content: center;
 }
@@ -473,6 +473,7 @@ h1 {
 
 .info {
   display: flex;
+  margin-top: 10px;
 }
 .infoTitle {
   width: 90px;
@@ -684,8 +685,8 @@ h1 {
   .fifthSectionWrap-reverse > .sectionText {
     width: auto;
     min-width: 330px;
-    margin-left: auto;
-    margin-right: 20px;
+    margin-right: auto;
+    margin-left: 20px;
   }
 }
 /* 화면 크기가 600px 이하일 때 로고 컨테이너 크기 조정 */
@@ -793,7 +794,7 @@ h1 {
   }
   .kakaoImgBox {
     object-fit: cover;
-    width: 210px;
+    width: 200px;
     height: auto;
     margin: 60px 0;
   }

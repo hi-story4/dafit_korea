@@ -6,9 +6,9 @@ export default function Footer() {
       <footer>
         <div className="footerWrap">
           <div className="footerContents">
-            <div className="logoContainer">
+            <div className="logoContainer" style={{ margin: "10px" }}>
               <Image
-                src="/imgs/로고 화이트 배경제거-cropped.svg"
+                src="/imgs/logo-white.svg"
                 alt="로고 화이트 배경제거"
                 width={200}
                 height={200}

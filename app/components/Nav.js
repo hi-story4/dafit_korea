@@ -85,7 +85,7 @@ export default function Nav() {
           }}
         >
           <Image
-            src="/imgs/심플 로고 블랙 배경제거-cropped.svg"
+            src="/imgs/simple-logo.svg"
             alt="심플 로고 블랙 배경제거"
             width={30}
             height={30}
