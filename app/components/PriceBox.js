@@ -1,6 +1,5 @@
 import "../style.css";
-import checkIcon from "../../public/imgs/check.svg";
-import Image from "next/image";
+import CheckIcon from "../../public/imgs/check.svg";
 import Link from "next/link";
 export default function Pricebox(props) {
   return (
@@ -20,11 +19,7 @@ export default function Pricebox(props) {
         >
           {props.textList.map((text, index) => (
             <li key={index}>
-              <Image
-                src={checkIcon}
-                alt="check"
-                style={{ width: "auto", paddingTop: "7px" }}
-              />
+              <CheckIcon style={{ width: "auto", paddingTop: "7px" }} />
               {text}
             </li>
           ))}

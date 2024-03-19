@@ -87,8 +87,8 @@ export default function Nav() {
           <Image
             src="/imgs/simple-logo.svg"
             alt="심플 로고 블랙 배경제거"
-            width={30}
-            height={30}
+            width={40}
+            height={40}
           />
         </div>
         <ul>

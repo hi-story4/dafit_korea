@@ -22,14 +22,16 @@ export default function register() {
       <header>
         <div className="hederContainer">
           <Link href="/">
-            <div className="logoContainer">
-              <Image
-                src="/imgs/logo-noborder.svg"
-                alt="logo"
-                width={50}
-                height={50}
-              />
-              <h4>다핏</h4>
+            <div className="hederContainer">
+              <div className="logoContainer">
+                <Image
+                  src="/imgs/logo-black.svg"
+                  alt="로고 블랙 배경제거 2:1"
+                  width={120} // 기본 크기
+                  height={50}
+                  layout="rendered"
+                />
+              </div>
             </div>
           </Link>
         </div>
