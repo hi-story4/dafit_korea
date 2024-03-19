@@ -207,16 +207,19 @@ li {
   border-radius: 30px;
 }
 /* component */
+/* header */
+
 .hederContainer {
   width: 100%;
   max-width: 1180px;
   height: auto;
   margin: 0 auto;
-  padding: 10px 40px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navWrap {
   width: 100%;
   max-width: 1180px;
@@ -428,12 +431,33 @@ h1 {
 .footerContents > h3 {
   color: var(--gray200);
 }
-
-.logoContainer {
-  display: flex;
-  justify-content: flex-start;
+.footerContents > .logoContainer {
+  width: 120px;
+  height: 60px;
+}
+.footerContents > .logoContainer img {
+  width: 100%;
+  height: 100%;
 }
 
+.logoContainer {
+  /* display: flex;
+  justify-content: flex-start; */
+  position: relative;
+}
+
+.logoContainer img {
+  width: 100px;
+  height: 50px;
+}
+.bigLogoContainer {
+  position: relative;
+}
+
+.bigLogoContainer img {
+  width: 400px;
+  height: auto;
+}
 /* footer */
 .logoContainer > h3 {
   margin-left: 15px;
@@ -626,6 +650,15 @@ h1 {
   .brandButton > img {
     height: 24px;
   }
+
+  .bigLogoContainer img {
+    width: 300px;
+    height: auto;
+  }
+  .footerContents > .logoContainer {
+    width: 100px;
+    height: 50px;
+  }
   .sectionWrap > .imgBox > img {
     max-width: 400px;
   }
@@ -655,6 +688,7 @@ h1 {
     margin-right: 20px;
   }
 }
+/* 화면 크기가 600px 이하일 때 로고 컨테이너 크기 조정 */
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width: 767px) {
@@ -674,7 +708,7 @@ h1 {
     margin-bottom: 10px;
   }
   .mySection {
-    padding: 40px;
+    height: 100vh;
   }
   .kakaoButton {
     width: 120px;
@@ -698,10 +732,28 @@ h1 {
     font-size: 14px;
     width: 115px;
   }
+  .logoContainer img {
+    width: 70px;
+    height: 35px;
+  }
+
+  .bigLogoContainer img {
+    width: 200px;
+    height: auto;
+  }
+  .footerContents > .logoContainer {
+    width: 60px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
   nav {
     padding: 0 20px;
     min-width: 350px;
     transition: all 1s;
+  }
+  .navWrap {
+    padding: 10px 25px;
   }
   .navWrap > button {
     font-size: 14px;
@@ -741,7 +793,7 @@ h1 {
   }
   .kakaoImgBox {
     object-fit: cover;
-    width: 230px;
+    width: 210px;
     height: auto;
     margin: 60px 0;
   }

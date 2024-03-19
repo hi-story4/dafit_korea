@@ -9,8 +9,6 @@ import kakao3 from "../public/imgs/kakao3.png";
 import kakao4 from "../public/imgs/kakao4.png";
 import kakao5 from "../public/imgs/kakao5.png";
 
-import spinning from "../public/imgs/spinning.gif";
-
 import Nav from "./components/Nav";
 import ServiceButton from "./components/ServiceButton";
 import KakaoButton from "./components/KakaoButton";
@@ -23,12 +21,12 @@ export default function Home() {
         <div className="hederContainer">
           <div className="logoContainer">
             <Image
-              src="/imgs/logo-noborder.svg"
-              alt="logo"
-              width={50}
+              src="/imgs/로고 블랙 배경제거-cropped.svg"
+              alt="로고 블랙 배경제거 2:1"
+              width={120} // 기본 크기
               height={50}
+              layout="rendered"
             />
-            <h4>다핏</h4>
           </div>
 
           <ServiceButton />
@@ -39,40 +37,79 @@ export default function Home() {
         <div className="heroSectionWrap">
           <p>다이어트 성공할 수밖에 없는 이유,</p>
           <h2>24시간 온라인 PT 서비스</h2>
-          <h1>다핏</h1>
+          <div className="bigLogoContainer">
+            <Image
+              src="/imgs/로고 블랙 흑백 배경제거.svg"
+              alt="로고 블랙 흑백 배경제거"
+              width={300}
+              height={300}
+            />
+          </div>
+
           <div className="buttons">
             <KakaoButton class="kakaoButton" />
             <ServiceButton class="brandButton" />
           </div>
         </div>
       </section>
-      <div>
-        <div className="sections">
-          <div className="mySection">
-            <div>
-              <h2>왜 다핏인가?</h2>
-            </div>
-            <div>
-              <Image src={spinning} alt="spinning" width={150} height={150} />
-            </div>
-            <div>
-              <h2>온라인 PT 다핏은 아래의 문제점을 모두 해결했습니다</h2>
-            </div>
 
-            <p>
-              "혼자 다이어트 하기 힘들어요" <br />
-            </p>
-            <p>
-              "PT가 너무 비싸요"
-              <br />
-            </p>
-            <p>
-              "시간이 없어요"
-              <br />
-            </p>
+      <div
+        style={{
+          fontFamily: "Arial, sans-serif",
+          padding: "20px",
+        }}
+      >
+        <h2 style={{ color: "#333", textAlign: "center", margin: "20px 0" }}>
+          왜 다핏인가?
+        </h2>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "20px 0",
+          }}
+        >
+          {/* Next.js의 Image 컴포넌트 사용 예시 */}
+          <div style={{ width: "100%", height: "auto", position: "relative" }}>
+            <Image
+              src="/imgs/kakao-feed.png"
+              layout="responsive"
+              width={700} // 원본 이미지의 너비
+              height={700} // 원본 이미지의 높이
+              alt="kakao-feed"
+            />
+          </div>
+        </div>
+
+        <div
+          style={{
+            margin: "20px 5%",
+            backgroundColor: "#fff",
+            padding: "20px",
+            borderRadius: "10px",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.05)",
+          }}
+        >
+          <h2 style={{ color: "#333", textAlign: "center", margin: "20px 0" }}>
+            온라인 PT 다핏은 아래의 문제점을 모두 해결했습니다
+          </h2>
+          <div
+            style={{
+              color: "#666",
+              lineHeight: 1.6,
+              textAlign: "center",
+            }}
+          >
+            <p>"혼자 다이어트 하기 힘들어요"</p>
+            <br />
+            <p>"PT가 너무 비싸요"</p>
+            <br />
+            <p>"시간이 없어요"</p>
           </div>
         </div>
       </div>
+
       <div className="sections">
         <Nav />
         <section className="firstSection">
@@ -264,8 +301,8 @@ export default function Home() {
 
               <p>
                 {" "}
-                올바른 운동 자세를 <br />
-                트레이너가 <strong> 직접 영상을 촬영하여 </strong> <br />
+                올바른 운동 자세를 트레이너가
+                <br /> <strong> 직접 영상을 촬영하여 </strong>
                 코칭해드립니다.{" "}
               </p>
             </div>
@@ -279,7 +316,7 @@ export default function Home() {
 
               <p>
                 {" "}
-                나와 맞는 <br />
+                나와 맞는
                 <strong> 식단 플랜을 세워드립니다. </strong> <br />
                 맞춤형 식단 플랜이 부담스럽다면 <br />
                 제공되지 않습니다.{" "}

@@ -8,13 +8,11 @@ export default function Footer() {
           <div className="footerContents">
             <div className="logoContainer">
               <Image
-                src="/imgs/logo-noborder.svg"
-                alt="logo"
-                width={100}
-                height={100}
+                src="/imgs/로고 화이트 배경제거-cropped.svg"
+                alt="로고 화이트 배경제거"
+                width={200}
+                height={200}
               />
-
-              <h3>다핏</h3>
             </div>
             <div className="info">
               <div className="infoTitle">

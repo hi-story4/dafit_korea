@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 // import DownloadButton from "./DownloadButton";
 import ServiceButton from "./ServiceButton";
 export default function Nav() {
@@ -75,7 +76,7 @@ export default function Nav() {
   return (
     <nav ref={navRef} className={section < 1 ? "disable" : "active"}>
       <div className="navWrap">
-        <h4
+        <div
           style={{ cursor: "pointer" }}
           onClick={() => {
             window.scrollTo({
@@ -83,8 +84,13 @@ export default function Nav() {
             });
           }}
         >
-          다핏
-        </h4>
+          <Image
+            src="/imgs/심플 로고 블랙 배경제거-cropped.svg"
+            alt="심플 로고 블랙 배경제거"
+            width={30}
+            height={30}
+          />
+        </div>
         <ul>
           <li
             onClick={() => {
