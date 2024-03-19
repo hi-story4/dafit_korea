@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/Footer";
 
 export const metadata = {
@@ -13,6 +13,7 @@ export default function Layout({ children }) {
       <body>
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
