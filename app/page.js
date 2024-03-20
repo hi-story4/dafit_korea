@@ -75,15 +75,8 @@ export default function Home() {
           }}
         >
           {/* Next.js의 Image 컴포넌트 사용 예시 */}
-          <div style={{ width: "100%", height: "auto", position: "relative" }}>
-            {/* <Image
-              src="/imgs/kakao-feed.svg"
-              layout="responsive"
-              width={700} // 원본 이미지의 너비
-              height={700} // 원본 이미지의 높이
-              alt="kakao-feed"
-            /> */}
-            <KakaoFeed style={{ width: "100%" }} />
+          <div className="kakaoFeedContainer">
+            <KakaoFeed style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
 
